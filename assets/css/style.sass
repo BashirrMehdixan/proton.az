@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..8001,300..800&family=Outfit:wght@100..900&display=swap')
+
+*
+    font-family: "Outfit", sans-serif
+    margin: 0
+    padding: 0
+    text-decoration: none
+    list-style-type: none
+
+html,
+body
+    height: 100%
+
+body
+    background: linear-gradient(to left, var(--color-main), var(--color-dark-main))
+
+a,
+i
+    color: inherit
+    font-weight: inherit
+    text-decoration: inherit
+
+@import "./partials/cards"
+
+.form-control
+    outline: none
+
+    &:focus
+        outline: none
+        box-shadow: none
+
+.overlay
+    position: absolute
+    width: 100%
+    height: 100%
+
+:root
+    --color-main: #3346d1
+    --color-main-40: rgba(51, 70, 209, .4)
+    --color-main-2: #331C71
+    --color-dark-main: #350034
+    --color-white: #fff
+    --color-white-75: rgba(255, 255, 255, .75)
+    --color-black: #262626
+
+// Swiper start
+.swiper
+    width: 100%
+    height: 100%
+
+    .swiper-button-prev,
+    .swiper-button-next
+        width: 50px
+        height: 50px
+        top: 15%
+        border: 1px solid var(--color-white)
+        right: 12%
+        border-radius: 50%
+        transition: all .4s ease
+
+        &::after
+            font-size: 1.3rem
+            font-weight: 600
+            color: var(--color-white)
+
+.swiper-slide
+    display: flex
+    justify-content: center
+    align-items: center
+
+.swiper-slide img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+// Swiper end
+
+// Buttons
+.btn-search
+    color: var(--color-white)
+
+.btn-main
+    color: var(--color-white)
+    background-color: var(--color-dark-main)
+    font-size: 1.12rem
+    font-weight: 500
+    padding: .8rem 1rem
+    transition: all .3s
+    text-transform: capitalize
+
+    &:hover
+        background-color: var(--color-white)
+        color: var(--color-dark-main)
+
+// Buttons
+
+// Titles
+.banner-title
+    font-size: 5.37rem
+    color: var(--color-white)
+    font-weight: 700
+    text-align: center
+    text-transform: capitalize
+
+.section-title-box
+    border-bottom: 1px solid var(--color-white-75)
+    padding: 1rem 0
+
+    .subtitle
+        position: relative
+        color: var(--color-white)
+        font-size: .95rem
+        font-weight: 500
+        text-transform: uppercase
+        padding-left: 1rem
+
+        &::before
+            position: absolute
+            content: ""
+            width: 10px
+            height: 10px
+            background-color: var(--color-white)
+            border-radius: 50%
+            left: 0
+            top: .2rem
+
+    .section-title
+        font-size: 2.75rem
+        color: var(--color-white)
+        font-weight: 600
+        text-transform: capitalize
+
+// Titles end
+
+// Header start
+header
+    position: absolute
+    width: 100%
+    z-index: 2
+
+    .header
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        color: var(--color-white)
+
+        .logo
+            max-width: 150px
+
+            img
+                width: 100%
+
+        .custom-navbar
+            display: flex
+            align-items: center
+            gap: 1rem
+
+            li
+                a
+                    display: block
+                    padding: 1rem .5rem
+                    font-weight: 500
+
+// Header end
+
+// Banner start
+.banner-bg
+    position: relative
+    width: 100%
+    height: 100vh
+    background: linear-gradient(to left, var(--color-main), var(--color-dark-main))
+    background-size: 100% 100%
+
+    .overlay
+        background-image: url(../images/h3_1.png)
+        background-size: cover
+        background-position: center center
+
+    .inner-text
+        font-size: 1.25rem
+        text-align: center
+        font-weight: 500
+        color: var(--color-white)
+        opacity: .7
+
+    .search-form
+        display: flex
+        align-items: center
+        gap: 1.5rem
+
+        .form-group:first-child
+            flex: 1
+
+        .form-control
+            box-shadow: none
+
+            &.custom-form
+                padding: 1rem 1.5rem
+                border-radius: 1.5rem
+                border: .25rem solid var(--color-main-2)
+
+// Banner end
+
+// Services start
+.servicesSwiper
+    color: var(--color-white)
+    padding: 3rem 0
+    position: static
+
+    .swiper-button-next,
+    .swiper-button-prev
+
+        &.swiper-button-prev
+            left: 89%
+
+        &:hover
+            background-color: var(--color-dark-main)
+
+// Services end
+
+// Home project start
+.home-projects
+
+// Home project end
