@@ -1,295 +1,342 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..8001,300..800&family=Outfit:wght@100..900&display=swap");
-
 * {
-    font-family: "Outfit", sans-serif;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
+  background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
 }
 
 a,
-i {
-    color: inherit;
-    font-weight: inherit;
-    text-decoration: inherit;
+i, h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
 }
 
 .service-card {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    background-color: var(--color-main-40);
-    cursor: pointer;
-    border-radius: 0.5rem;
-    transform: translateY(40px);
-    transition: all 0.5s;
-    overflow: hidden;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-main-40);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transform: translateY(40px);
+  transition: all 0.5s;
+  overflow: hidden;
 }
-
 .service-card .service-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
-
 .service-card .service-head .count {
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--color-white);
-    opacity: 0.7;
-    padding: 0.2rem 1.3rem;
-    border-radius: 1rem;
-    background-color: var(--color-main-2);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-white);
+  opacity: 0.7;
+  padding: 0.2rem 1.3rem;
+  border-radius: 1rem;
+  background-color: var(--color-main-2);
 }
-
 .service-card .service-body .service-title {
-    font-size: 1.7rem;
-    text-transform: capitalize;
-    font-weight: 600;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  font-weight: 600;
 }
-
 .service-card .service-body .inner-text {
-    font-size: 1.12rem;
+  font-size: 1.12rem;
 }
-
 .service-card .service-body a {
-    display: block;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    padding-bottom: 0.5rem;
-    visibility: hidden;
-    opacity: 0;
+  display: block;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
 }
-
 .service-card:hover {
-    background-color: var(--color-main);
-    box-shadow: 0 0 10px var(--color-main-2);
-    transform: translateY(0);
+  background-color: var(--color-main);
+  box-shadow: 0 0 10px var(--color-main-2);
+  transform: translateY(0);
+}
+.service-card:hover .service-body a {
+  visibility: visible;
+  opacity: 1;
 }
 
-.service-card:hover .service-body a {
-    visibility: visible;
-    opacity: 1;
+.project-card {
+  background: var(--color-main-40);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: var(--color-white);
+}
+.project-card .project-img {
+  width: 100%;
+  height: 18.75rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.project-card .project-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project-card .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: all 0.3s;
+}
+.project-card .card-body {
+  padding-top: 1.5rem;
+}
+.project-card .card-body .project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.project-card .card-body .project-prices .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-white-75);
+  line-height: 1.26rem;
+}
+.project-card .card-body .project-prices .price.old-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+  padding-left: 1rem;
+}
+.project-card:hover {
+  background: var(--color-main);
+}
+.project-card:hover .project-img img {
+  transform: scale(1.1);
 }
 
 .form-control {
-    outline: none;
+  outline: none;
 }
-
 .form-control:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 :root {
-    --color-main: #3346d1;
-    --color-main-40: rgba(51, 70, 209, .4);
-    --color-main-2: #331C71;
-    --color-dark-main: #350034;
-    --color-white: #fff;
-    --color-white-75: rgba(255, 255, 255, .75);
-    --color-black: #262626;
+  --color-main: #3346d1;
+  --color-main-40: rgba(51, 70, 209, .4);
+  --color-main-2: #331C71;
+  --color-dark-main: #350034;
+  --color-white: #fff;
+  --color-white-75: rgba(255, 255, 255, .75);
+  --color-black: #262626;
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-    width: 50px;
-    height: 50px;
-    top: 15%;
-    border: 1px solid var(--color-white);
-    right: 12%;
-    border-radius: 50%;
-    transition: all 0.4s ease;
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  border: 1px solid var(--color-white);
+  right: 12%;
+  border-radius: 50%;
+  transition: all 0.4s ease;
 }
-
 .swiper .swiper-button-prev::after,
 .swiper .swiper-button-next::after {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--color-white);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-white);
 }
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .btn-search {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .btn-main {
-    color: var(--color-white);
-    background-color: var(--color-dark-main);
-    font-size: 1.12rem;
-    font-weight: 500;
-    padding: 0.8rem 1rem;
-    transition: all 0.3s;
-    text-transform: capitalize;
+  color: var(--color-white);
+  background-color: var(--color-dark-main);
+  font-size: 1.12rem;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s;
+  text-transform: capitalize;
 }
-
 .btn-main:hover {
-    background-color: var(--color-white);
-    color: var(--color-dark-main);
+  background-color: var(--color-white);
+  color: var(--color-dark-main);
 }
 
 .banner-title {
-    font-size: 5.37rem;
-    color: var(--color-white);
-    font-weight: 700;
-    text-align: center;
-    text-transform: capitalize;
+  font-size: 5.37rem;
+  color: var(--color-white);
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .section-title-box {
-    border-bottom: 1px solid var(--color-white-75);
-    padding: 1rem 0;
+  border-bottom: 1px solid var(--color-white-75);
+  padding: 1rem 0;
 }
-
 .section-title-box .subtitle {
-    position: relative;
-    color: var(--color-white);
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-left: 1rem;
+  position: relative;
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 1rem;
 }
-
 .section-title-box .subtitle::before {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    left: 0;
-    top: 0.2rem;
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  left: 0;
+  top: 0.2rem;
 }
-
 .section-title-box .section-title {
-    font-size: 2.75rem;
-    color: var(--color-white);
-    font-weight: 600;
-    text-transform: capitalize;
+  font-size: 2.75rem;
+  color: var(--color-white);
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 header {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
-
 header .header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--color-white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-white);
 }
-
 header .header .logo {
-    max-width: 150px;
+  max-width: 150px;
 }
-
 header .header .logo img {
-    width: 100%;
+  width: 100%;
 }
-
 header .header .custom-navbar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-
 header .header .custom-navbar li a {
-    display: block;
-    padding: 1rem 0.5rem;
-    font-weight: 500;
+  display: block;
+  padding: 1rem 0.5rem;
+  font-weight: 500;
 }
 
 .banner-bg {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
-    background-size: 100% 100%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
+  background-size: 100% 100%;
 }
-
 .banner-bg .overlay {
-    background-image: url(../images/h3_1.png);
-    background-size: cover;
-    background-position: center center;
+  background-image: url(../images/h3_1.png);
+  background-size: cover;
+  background-position: center center;
 }
-
 .banner-bg .inner-text {
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: 500;
-    color: var(--color-white);
-    opacity: 0.7;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-white);
+  opacity: 0.7;
 }
-
 .banner-bg .search-form {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
-
 .banner-bg .search-form .form-group:first-child {
-    flex: 1;
+  flex: 1;
 }
-
 .banner-bg .search-form .form-control {
-    box-shadow: none;
+  box-shadow: none;
 }
-
 .banner-bg .search-form .form-control.custom-form {
-    padding: 1rem 1.5rem;
-    border-radius: 1.5rem;
-    border: 0.25rem solid var(--color-main-2);
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 0.25rem solid var(--color-main-2);
 }
 
 .servicesSwiper {
-    color: var(--color-white);
-    padding: 3rem 0;
-    position: static;
+  color: var(--color-white);
+  padding-top: 3rem;
+  position: static;
 }
-
 .servicesSwiper .swiper-button-next.swiper-button-prev,
 .servicesSwiper .swiper-button-prev.swiper-button-prev {
-    left: 89%;
+  left: 89%;
 }
-
 .servicesSwiper .swiper-button-next:hover,
 .servicesSwiper .swiper-button-prev:hover {
-    background-color: var(--color-dark-main);
+  background-color: var(--color-dark-main);
+}
+
+.home-projects {
+  position: relative;
+  padding: 2.5rem 0 6rem 0;
+}
+.home-projects .homeProjectsSwiper {
+  position: static;
+  padding-top: 2rem;
+}
+.home-projects .homeProjectsSwiper .swiper-button-next,
+.home-projects .homeProjectsSwiper .swiper-button-prev {
+  top: 100%;
+}
+.home-projects .homeProjectsSwiper .swiper-button-next.swiper-button-next,
+.home-projects .homeProjectsSwiper .swiper-button-prev.swiper-button-next {
+  right: 49%;
+}
+.home-projects .homeProjectsSwiper .swiper-button-next.swiper-button-prev,
+.home-projects .homeProjectsSwiper .swiper-button-prev.swiper-button-prev {
+  left: 43%;
 }
