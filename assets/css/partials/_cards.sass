@@ -102,3 +102,36 @@
                 transform: scale(1.1)
 
 // Project card end
+
+// Team card start
+.team-card
+    position: relative
+    z-index: 1
+    width: 100%
+    height: 100%
+    border-radius: 155px
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+        border-radius: 155px
+        transition: all .5s
+        // border-radius: 50%
+    &::before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        border-radius: 155px
+        background-color: var(--color-main)
+        transition: all .5s
+        z-index: -1
+    &:hover
+        img
+            transform: scale(1.1)
+        &::before
+            top: 5px
+            left: 5px
+// Team card end
