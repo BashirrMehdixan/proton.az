@@ -129,6 +129,40 @@ i, h1, h2, h3, h4, h5, h6 {
   transform: scale(1.1);
 }
 
+.team-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 155px;
+  overflow: hidden;
+}
+.team-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 155px;
+  transition: all 0.5s;
+}
+.team-card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 155px;
+  background-color: var(--color-main);
+  transition: all 0.5s;
+  z-index: -1;
+}
+.team-card:hover img {
+  transform: scale(1.1);
+}
+.team-card:hover::before {
+  top: 5px;
+  left: 5px;
+}
+
 .form-control {
   outline: none;
 }
@@ -197,7 +231,7 @@ i, h1, h2, h3, h4, h5, h6 {
   font-size: 1.12rem;
   font-weight: 500;
   padding: 0.8rem 1rem;
-  transition: all 0.3s;
+  transition: 0.5s ease-in-out;
   text-transform: capitalize;
 }
 .btn-main:hover {
