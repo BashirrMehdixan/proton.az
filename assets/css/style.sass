@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..8001,300..800&family=Outfit:wght@100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap')
 
 *
-    font-family: "Outfit", sans-serif
+    font-family: "Outfit", system-ui
     margin: 0
     padding: 0
     text-decoration: none
@@ -124,8 +124,8 @@ i, h1,h2, h3, h4, h5, h6
         &::before
             position: absolute
             content: ""
-            width: 10px
-            height: 10px
+            width: 8px
+            height: 8px
             background-color: var(--color-white)
             border-radius: 50%
             left: 0
@@ -234,7 +234,8 @@ header
     .homeProjectsSwiper
         position: static
         padding-top: 2rem
-        // &.activ
+        .swiper-wrapper
+            margin: 0 -18.75rem
         .swiper-button-next,
         .swiper-button-prev
             top: 100%
@@ -285,3 +286,27 @@ header
             line-height: 1.5rem
             color: var(--color-white-75)
     // Home preferences end
+
+// Partnes start
+.partnersSwiper
+    padding: .8rem 0
+.partner-item
+    width: 100%
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid var(--color-main)
+    border-radius: .9rem
+    cursor: pointer
+    transition: all .3s
+    &:hover
+        background: var(--color-main-dark)
+        border-color: transparent
+    a
+        max-width: 100%
+        height: auto
+        img
+            max-width: 100%
+            height: 100%
+// Partners end

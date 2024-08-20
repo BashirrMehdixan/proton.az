@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..8001,300..800&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap");
 * {
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit", system-ui;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -234,8 +234,8 @@ i, h1, h2, h3, h4, h5, h6 {
 .section-title-box .subtitle::before {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: var(--color-white);
   border-radius: 50%;
   left: 0;
@@ -336,6 +336,9 @@ header .header .custom-navbar li a {
   position: static;
   padding-top: 2rem;
 }
+.home-projects .homeProjectsSwiper .swiper-wrapper {
+  margin: 0 -18.75rem;
+}
 .home-projects .homeProjectsSwiper .swiper-button-next,
 .home-projects .homeProjectsSwiper .swiper-button-prev {
   top: 100%;
@@ -394,4 +397,32 @@ header .header .custom-navbar li a {
   font-weight: 500;
   line-height: 1.5rem;
   color: var(--color-white-75);
+}
+
+.partnersSwiper {
+  padding: 0.8rem 0;
+}
+
+.partner-item {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-main);
+  border-radius: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.partner-item:hover {
+  background: var(--color-main-dark);
+  border-color: transparent;
+}
+.partner-item a {
+  max-width: 100%;
+  height: auto;
+}
+.partner-item a img {
+  max-width: 100%;
+  height: 100%;
 }
