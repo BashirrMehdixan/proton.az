@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
+  background: linear-gradient(to left, var(--color-main), var(--color-main-dark));
 }
 
 a,
@@ -147,7 +147,7 @@ i, h1, h2, h3, h4, h5, h6 {
   --color-main: #3346d1;
   --color-main-40: rgba(51, 70, 209, .4);
   --color-main-2: #331C71;
-  --color-dark-main: #350034;
+  --color-main-dark: #350034;
   --color-white: #fff;
   --color-white-75: rgba(255, 255, 255, .75);
   --color-black: #262626;
@@ -192,7 +192,7 @@ i, h1, h2, h3, h4, h5, h6 {
 
 .btn-main {
   color: var(--color-white);
-  background-color: var(--color-dark-main);
+  background: var(--color-main);
   font-size: 1.12rem;
   font-weight: 500;
   padding: 0.8rem 1rem;
@@ -200,8 +200,15 @@ i, h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
 }
 .btn-main:hover {
+  background-color: var(--color-main-2);
+  box-shadow: 0 0 10px var(--color-main-dark);
+}
+.btn-main.dark {
+  background-color: var(--color-main-dark);
+}
+.btn-main.dark:hover {
   background-color: var(--color-white);
-  color: var(--color-dark-main);
+  color: var(--color-main-dark);
 }
 
 .banner-title {
@@ -238,6 +245,7 @@ i, h1, h2, h3, h4, h5, h6 {
   font-size: 2.75rem;
   color: var(--color-white);
   font-weight: 600;
+  line-height: 1.2;
   text-transform: capitalize;
 }
 
@@ -274,7 +282,7 @@ header .header .custom-navbar li a {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to left, var(--color-main), var(--color-dark-main));
+  background: linear-gradient(to left, var(--color-main), var(--color-main-dark));
   background-size: 100% 100%;
 }
 .banner-bg .overlay {
@@ -317,7 +325,7 @@ header .header .custom-navbar li a {
 }
 .servicesSwiper .swiper-button-next:hover,
 .servicesSwiper .swiper-button-prev:hover {
-  background-color: var(--color-dark-main);
+  background-color: var(--color-main-dark);
 }
 
 .home-projects {
@@ -339,4 +347,51 @@ header .header .custom-navbar li a {
 .home-projects .homeProjectsSwiper .swiper-button-next.swiper-button-prev,
 .home-projects .homeProjectsSwiper .swiper-button-prev.swiper-button-prev {
   left: 43%;
+}
+
+.home-preferences {
+  padding: 5rem 0;
+}
+.home-preferences .section-title-box {
+  border-bottom: 0;
+}
+.home-preferences .preferences-img {
+  height: 38.12rem;
+}
+.home-preferences .preferences-img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.preferences-list li {
+  display: flex;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+.preferences-list li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.3rem;
+  height: 3.5rem;
+  background: var(--color-main);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.preferences-list li .icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+.preferences-list li .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.preferences-list li .inner-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--color-white-75);
 }

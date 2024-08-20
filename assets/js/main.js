@@ -1,18 +1,18 @@
 feather.replace();
 
-
-var swiper = new Swiper(".servicesSwiper", {
+let servicesSwiper = new Swiper(".servicesSwiper", {
   slidesPerView: 3,
-  spaceBetween: 10,
   loop: true,
+  spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
 
-var swiper = new Swiper(".homeProjectsSwiper", {
+let homeProjectsSwiper = new Swiper(".homeProjectsSwiper", {
   slidesPerView: 3,
+  loop: true,
   spaceBetween: 30,
   loop: true,
   navigation: {
