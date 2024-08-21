@@ -173,6 +173,53 @@ i, h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+.home_blog_item {
+  background: transparent;
+  color: var(--color-white);
+  border: none;
+  border-radius: 0;
+  border-top: 1px dotted var(--color-main);
+  padding: 1rem 0;
+}
+.home_blog_item .blog_category {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.9rem;
+  background: var(--color-main);
+  margin-bottom: 0.5rem;
+}
+.home_blog_item .card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+.home_blog_item .blog-auth {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.home_blog_item .blog-auth span {
+  color: var(--color-white-75);
+}
+.home_blog_item .blog-auth .auth-img {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
+.home_blog_item .blog-auth .auth-img img {
+  width: 100%;
+  height: 100%;
+}
+.home_blog_item .blog-auth .auth-title {
+  transition: all 0.3s;
+}
+.home_blog_item .blog-auth .auth-title:hover {
+  color: var(--color-main);
+}
+
 .form-control {
   outline: none;
 }
@@ -277,6 +324,7 @@ i, h1, h2, h3, h4, h5, h6 {
 }
 .section-title-box .subtitle {
   position: relative;
+  display: inline-flex;
   color: var(--color-white);
   font-size: 0.95rem;
   font-weight: 500;
