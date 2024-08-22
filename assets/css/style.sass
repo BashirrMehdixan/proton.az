@@ -218,6 +218,7 @@ header
             display: flex
             align-items: center
             gap: 1rem
+            padding: 1rem 0
 
             li
                 a
@@ -421,6 +422,16 @@ header
 
 .footer-right
     margin-left: 5.31rem
+    .footer-mail
+        font-size: 1.5rem
+        color: var(--color-white)
+        display: flex
+        align-items: center
+        gap: .5rem
+        padding-bottom: 1rem
+        transition: .5s
+        &:hover
+            color: var(--color-main-dark)
 
 .footer-menu
     color: var(--color-white-75)
@@ -429,9 +440,23 @@ header
     li
         margin-bottom: 1rem
 .subscribe-form
-    .custom-form
-        background: transparent
-        color: var(--color-white)
-        &::placeholder
+    .form-group
+        position: relative
+        .custom-form
+            background: transparent
             color: var(--color-white)
+            &::placeholder
+                color: var(--color-white)
+        .btn-main
+            position: absolute
+            top: 5px
+            right: 8px
+            border-radius: 50%
+
+.copyright
+    color: var(--color-white-75)
+    font-size: 1.2rem
+    a
+        color: var(--color-white)
+
 // Footer end

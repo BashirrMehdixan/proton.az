@@ -427,6 +427,7 @@ header .header .custom-navbar {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 1rem 0;
 }
 header .header .custom-navbar li a {
   display: block;
@@ -650,6 +651,18 @@ header .header .custom-navbar li a {
 .footer-right {
   margin-left: 5.31rem;
 }
+.footer-right .footer-mail {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  transition: 0.5s;
+}
+.footer-right .footer-mail:hover {
+  color: var(--color-main-dark);
+}
 
 .footer-menu {
   color: var(--color-white-75);
@@ -660,10 +673,27 @@ header .header .custom-navbar li a {
   margin-bottom: 1rem;
 }
 
-.subscribe-form .custom-form {
+.subscribe-form .form-group {
+  position: relative;
+}
+.subscribe-form .form-group .custom-form {
   background: transparent;
   color: var(--color-white);
 }
-.subscribe-form .custom-form::placeholder {
+.subscribe-form .form-group .custom-form::placeholder {
+  color: var(--color-white);
+}
+.subscribe-form .form-group .btn-main {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  border-radius: 50%;
+}
+
+.copyright {
+  color: var(--color-white-75);
+  font-size: 1.2rem;
+}
+.copyright a {
   color: var(--color-white);
 }
