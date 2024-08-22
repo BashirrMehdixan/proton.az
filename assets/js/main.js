@@ -21,8 +21,8 @@ let servicesSwiper = new Swiper(".servicesSwiper", {
 });
 
 let homeProjectsSwiper = new Swiper(".homeProjectsSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 30,
     loop: true,
     breakpoints: {
         640: {

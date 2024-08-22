@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-none d-lg-flex align-items-center gap-2">
                     <button class="btn btn-search">
                         <i data-feather="search"></i>
                     </button>
@@ -88,12 +88,24 @@
     <section class="position-relative home-services-section py-5">
         <div class="container">
             <div class="section-title-box">
-                <h4 class="subtitle">
-                    day-to-day operations
-                </h4>
-                <h2 class="section-title">
-                    Empowering excellence
-                </h2>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-7 mb-5 mb-lg-0">
+                        <h4 class="subtitle">
+                            day-to-day operations
+                        </h4>
+                        <h2 class="section-title">
+                            Empowering excellence
+                        </h2>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="swiper-buttons">
+                            <button class="btn swiper-button-prev">
+                            </button>
+                            <button class="btn swiper-button-next">
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="swiper servicesSwiper">
@@ -585,8 +597,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -597,7 +607,7 @@
         <div class="container">
             <div class="section-title-box">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <h4 class="subtitle">
                             our projects
                         </h4>
@@ -605,10 +615,12 @@
                             Unlocking Potential Explore Our Projects
                         </h2>
                     </div>
-                    <div class="col-6 d-flex">
-                        <a href="./projects.html" class="btn btn-main dark ms-auto">
-                            more projects
-                        </a>
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex mt-3">
+                            <a href="./projects.html" class="btn btn-main dark ms-auto">
+                                more projects
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -826,8 +838,10 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
     </section>
     <!-- Projects end -->
