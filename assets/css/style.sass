@@ -87,6 +87,9 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
         border: none
         box-shadow: none
         opacity: 1
+    &.btn-nav
+        display: none
+
     &.btn-close
         display: flex
         align-items: center
@@ -487,7 +490,11 @@ header
 
 // Footer end
 
+// Media queries
 @media (max-width: 992px)
+    .btn
+        &.btn-nav
+            display: inline-block
     .banner-title
         font-size: 2.55rem
 
@@ -534,3 +541,8 @@ header
 
     .footer-right
         margin-left: 0
+
+@media only screen and (min-width: 576px) and (max-width: 992px)
+    .col-custom-md-6
+        flex: 0 0 auto
+        width: 50%
