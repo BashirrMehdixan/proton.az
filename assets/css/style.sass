@@ -137,7 +137,12 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
             &::placeholder
                 opacity: 0
 // Buttons end
-
+.section-img
+    margin-bottom: 1.5rem
+    img
+        display: block
+        max-width: 100%
+        height: 100%
 // Titles
 .inner-text
     font-size: 1.2rem
@@ -227,6 +232,13 @@ header
     position: absolute
     width: 100%
     z-index: 2
+    transition: .3s
+    transform-origin: top
+    &.fixed-header
+        position: fixed
+        background: linear-gradient(to left, var(--color-main), var(--color-main-dark))
+        box-shadow: 0 0 20px var(--color-main-dark)
+        z-index: 11
 
     .header
         width: 100%
@@ -273,6 +285,38 @@ header
         .form-group:first-child
             flex: 1
 
+.breadcrumb-bg
+    position: relative
+    text-transform: capitalize
+    width: 100%
+    height: 23rem
+    margin-top: 5.75rem
+    background: linear-gradient(90deg, var(--color-main-dark), var(--color-main-40) 100%)
+    border-radius: .5rem
+    z-index: 1
+    .breadcrumb-title
+        color: var(--color-white)
+        font-size: 3rem
+        font-weight: 500
+        padding: .5rem 0
+    .breadcrumb-box
+        color: var(--color-white)
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            font-size: 1rem
+            font-weight: 500
+            &:not(:first-child)
+                color: var(--color-white-75)
+
+    .breadcrumb-img
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        z-index: -1
 // Banner end
 
 // Services start
@@ -299,6 +343,10 @@ header
     color: var(--color-white)
     padding-top: 3rem
     position: static
+    .service-body
+        a
+            visibility: hidden
+            opacity: 0
 
 // Services end
 
@@ -322,19 +370,13 @@ header
     padding: 5rem 0
     .section-title-box
         border-bottom: 0
-    .preferences-img
+    .section-img
         img
-            display: block
-            max-width: 100%
-            height: 100%
             margin-left: auto
 
 .preferences-section-2
     .section-img
         width: 100%
-        img
-            width: 100%
-            height: 100%
 
     .successful-projects
         display: flex
@@ -440,6 +482,17 @@ header
         font-weight: 600
         &:hover
             color: var(--color-main)
+// Home contact end
+
+// About page start
+.our-story
+    padding: 3.5rem 0
+    .section-content
+        padding: 0 3rem
+        .content-body
+            margin-bottom: 1rem
+
+// About page end
 
 //  Footer start
 .small-title
@@ -535,6 +588,10 @@ header
         .homeProjectsSwiper
             .swiper-wrapper
                 margin: 0
+
+    .our-story
+        .section-content
+            padding: 0
 
     .footer-left
         margin-right: 0
