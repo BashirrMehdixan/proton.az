@@ -138,6 +138,9 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   transform: scale(1.1);
 }
 
+.team-card {
+  width: 100%;
+}
 .team-card .team-img {
   position: relative;
   z-index: 1;
@@ -163,6 +166,20 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   opacity: 0;
   transition: all 0.5s;
   z-index: -1;
+}
+.team-card.main-card .team-img {
+  background: var(--color-main-40);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.team-card.main-card .team-img::before {
+  width: 0;
+}
+.team-card.main-card .team-img img {
+  border-radius: 0.5rem;
+}
+.team-card.main-card .social-network li a {
+  padding: 0.5rem;
 }
 .team-card .team-body {
   color: var(--color-white);
@@ -432,6 +449,7 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
 .social-network {
   display: flex;
   align-items: center;
+  color: var(--color-white);
   gap: 1rem;
 }
 .social-network li a {
@@ -737,6 +755,14 @@ header .header .custom-navbar li a {
 }
 .our-story .section-content .content-body {
   margin-bottom: 1rem;
+}
+
+.teams-section .swiper-buttons {
+  justify-content: flex-start;
+  padding: 1.5rem 0;
+}
+.teams-section .swiper-buttons .swiper-button-next, .teams-section .swiper-buttons .swiper-button-prev {
+  border: 1px solid var(--color-main);
 }
 
 .small-title {
