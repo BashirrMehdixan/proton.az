@@ -56,3 +56,16 @@ let partnersSwiper = new Swiper(".partnersSwiper", {
         },
     },
 });
+
+
+const btnNav = document.querySelector(".btn-nav");
+const btnClose = document.querySelector("header .btn-close");
+const nav = document.querySelector("header nav");
+
+btnNav.addEventListener('click', () => {
+    nav.classList.add("active");
+})
+
+btnClose.addEventListener('click', () => {
+    nav.classList.remove('active');
+})
