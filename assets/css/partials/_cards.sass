@@ -3,10 +3,12 @@
     width: 100%
     padding: 1rem 1.5rem
     background-color: var(--color-main-40)
+    color: var(--color-white-75)
     cursor: pointer
     border-radius: .5rem
     transform: translateY(40px)
     transition: all .5s
+    margin-bottom: 1.87rem
     overflow: hidden
 
     .service-head
@@ -14,7 +16,8 @@
         align-items: center
         justify-content: space-between
         gap: 1rem
-
+        .icon
+            transition: .3s linear
         .count
             font-size: 1.15rem
             font-weight: 500
@@ -39,14 +42,14 @@
             font-size: 1.2rem
             text-transform: capitalize
             padding-bottom: .5rem
-            visibility: hidden
-            opacity: 0
 
     &:hover
         background-color: var(--color-main)
         box-shadow: 0 0 10px var(--color-main-2)
         transform: translateY(0)
-
+        .service-head
+            .icon
+                background: var(--color-main-2)
         .service-body
             a
                 visibility: visible

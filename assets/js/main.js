@@ -57,7 +57,7 @@ let partnersSwiper = new Swiper(".partnersSwiper", {
     },
 });
 
-
+const header = document.querySelector("header");
 const btnNav = document.querySelector(".btn-nav");
 const btnClose = document.querySelector("header .btn-close");
 const nav = document.querySelector("header nav");
@@ -68,4 +68,13 @@ btnNav.addEventListener('click', () => {
 
 btnClose.addEventListener('click', () => {
     nav.classList.remove('active');
+})
+
+window.addEventListener('scroll', () => {
+    console.log(window.scrollY)
+    if (window.scrollY > 30) {
+        header.classList.add("fixed-header");
+    } else {
+        header.classList.remove("fixed-header");
+    }
 })
