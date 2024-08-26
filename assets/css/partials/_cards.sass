@@ -109,6 +109,7 @@
 
 // Team card start
 .team-card
+    width: 100%
     .team-img
         position: relative
         z-index: 1
@@ -132,6 +133,19 @@
             opacity: 0
             transition: all .5s
             z-index: -1
+    &.main-card
+        .team-img
+            background: var(--color-main-40)
+            padding: 1rem
+            border-radius: .5rem
+            &::before
+                width: 0
+            img
+                border-radius: .5rem
+        .social-network
+            li
+                a
+                    padding: .5rem
     .team-body
         color: var(--color-white)
         text-align: center

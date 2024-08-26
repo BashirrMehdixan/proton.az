@@ -57,6 +57,21 @@ let partnersSwiper = new Swiper(".partnersSwiper", {
     },
 });
 
+let teamsSwiper = new Swiper(".teamsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 const header = document.querySelector("header");
 const btnNav = document.querySelector(".btn-nav");
 const btnClose = document.querySelector("header .btn-close");
@@ -71,7 +86,6 @@ btnClose.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
     if (window.scrollY > 30) {
         header.classList.add("fixed-header");
     } else {
