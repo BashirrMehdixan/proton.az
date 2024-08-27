@@ -642,6 +642,38 @@ header .header .custom-navbar li a {
   margin: 0 -18.75rem;
 }
 
+.detail-body .portfolio-info {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+}
+.detail-body .portfolio-info li {
+  color: var(--color-white-75);
+  border: 1px solid var(--color-white-75);
+  padding: 2rem 1.875rem 2.125rem;
+}
+.detail-body .portfolio-info .inner-text {
+  color: var(--color-white);
+  padding: 0.5rem 0 0 0;
+}
+.detail-body .portfolio-info:first-child {
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.detail-body .portfolio-info:last-child {
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.detail-body .detail-img {
+  border-radius: 0.8rem;
+}
+.detail-body .detail-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+}
+
 .home-preferences {
   padding: 5rem 0;
 }
