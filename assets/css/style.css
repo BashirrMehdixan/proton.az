@@ -1012,6 +1012,49 @@ header .header .custom-navbar li a {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.items-center {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.items-center .feather {
+  color: var(--color-white-75);
+}
+
+.blog-detail {
+  color: var(--color-white);
+}
+.blog-detail .blog-img {
+  margin-bottom: 1.5rem;
+}
+.blog-detail .blog-img img {
+  width: 100%;
+}
+.blog-detail .blog-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.blog-detail .blog-info {
+  color: var(--color-white-75);
+  gap: 1.5rem;
+}
+.blog-detail .blog-info .auth-info {
+  gap: 0.8rem;
+}
+.blog-detail .blog-info .auth-info .auth-img {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
+.blog-detail .blog-info .auth-info .auth-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.blog-detail .blog-info .auth-info .auth-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
 .small-title {
   font-weight: 600;
   font-size: 1.5rem;
