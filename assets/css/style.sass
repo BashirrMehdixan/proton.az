@@ -82,6 +82,7 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
 
 // Buttons start
 .btn
+    transition: .5s ease-in-out
     &:focus
         outline: none
         border: none
@@ -122,6 +123,20 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
             &:hover
                 background-color: var(--color-white)
                 color: var(--color-main-dark)
+    &.btn-play
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 4.5rem
+        height: 4.5rem
+        border-radius: 50%
+        background: var(--color-main)
+        padding-left: 1rem
+        .feather
+            color: var(--color-white)
+        &:hover
+            background: var(--color-main-2)
+
 .form-control
     box-shadow: none
 
@@ -137,12 +152,14 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
             &::placeholder
                 opacity: 0
 // Buttons end
+
 .section-img
     margin-bottom: 1.5rem
     img
         display: block
         max-width: 100%
         height: 100%
+
 // Titles
 .inner-text
     font-size: 1.2rem
@@ -200,8 +217,27 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
         font-weight: 600
         line-height: 1.2
         text-transform: capitalize
+        padding: .5rem 0
 
 // Titles end
+
+.images-box
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 1rem
+    .image-item
+        position: relative
+        border-radius: .8rem
+        img
+            width: 100%
+            object-fit: cover
+            border-radius: .8rem
+        .btn-play
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            z-index: 2
 
 // Pagination start
 .pagination
@@ -393,10 +429,12 @@ header
         display: grid
         align-items: center
         grid-template-columns: repeat(6, 1fr)
+        border: 1px solid rgba(255, 255, 255, .25)
         li
             color: var(--color-white-75)
-            border: 1px solid var(--color-white-75)
             padding: 2rem 1.875rem 2.125rem
+            &:not(:last-child)
+                border-right: 1px solid rgba(255, 255, 255, .25)
         .inner-text
             color: var(--color-white)
             padding: .5rem 0 0 0
@@ -413,6 +451,22 @@ header
             width: 100%
             height: 100%
             border-radius: .8rem
+
+.services-list
+    li
+        display: flex
+        align-items: center
+        gap: 1rem
+        color: var(--color-white-75)
+        font-size: 1.125rem
+        font-weight: 500
+        margin-bottom: .8rem
+        .icon
+            width: 1.5rem
+            height: 1.5rem
+            .feather-check
+                width: 1.2rem
+                height: 1.2rem
 // Home project end
 
 // Home preferences start
@@ -552,7 +606,47 @@ header
         .swiper-button-next, .swiper-button-prev
             border: 1px solid var(--color-main)
 
-//  Footer start
+.faq-section
+    border-top: 1px solid var(--color-white-75)
+
+.faq-accordion
+    border-radius: .8rem
+    .accordion-item
+        background-color: var(--color-main-dark)
+        border: 2px solid transparent
+        color: var(--color-white)
+        margin-bottom: 1.25rem
+        transition: .3s
+        border-radius: .8rem
+        overflow: hidden
+        &:has(.show)
+            border: 2px solid var(--color-main)
+        .accordion-header
+            .accordion-button
+                background-color: var(--color-main-dark)
+                color: var(--color-white)
+                box-shadow: none
+                font-size: 1.4rem
+                padding: 1.875rem 1.875rem 1.875rem
+                gap: 1rem
+                .icon
+                    width: 2.25rem
+                    height: 2.25rem
+                    transition: .5s
+                    .feather
+                        width: 1.5rem
+                        height: 1.5rem
+                &.collapsed
+                    .icon
+                        transform: rotate(-45deg)
+                &::after
+                    content: ""
+                    background: none
+        .accordion-body
+            padding: 0 1.875rem 1.56rem 4.75rem
+            .inner-text
+                border-top: 1px solid rgba(255, 255, 255, .15)
+    //  Footer start
 .small-title
     font-weight: 600
     font-size: 1.5rem
@@ -657,7 +751,33 @@ header
     .footer-right
         margin-left: 0
 
+@media (max-width: 768px)
+    .breadcrumb-bg
+        .breadcrumb-title
+            font-size: 2.25rem
+
+    .detail-body .portfolio-info
+        grid-template-columns: repeat(1, 1fr)
+        li
+            border-right: none !important
+    .images-box
+        grid-template-columns: repeat(1, 1fr)
+
+.faq-accordion
+    .accordion-item
+        .accordion-header
+            .accordion-button
+                font-size: 1.15rem
+                padding: 1.25rem .57rem
+
 @media only screen and (min-width: 576px) and (max-width: 992px)
     .col-custom-md-6
         flex: 0 0 auto
         width: 50%
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+    .detail-body .portfolio-info
+        grid-template-columns: repeat(2, 1fr)
+        li
+            &:nth-child(2n)
+                border-right: none
