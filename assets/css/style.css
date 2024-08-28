@@ -18,6 +18,11 @@ body {
   background: linear-gradient(to left, var(--color-main), var(--color-main-dark));
 }
 
+iframe {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
 a,
 i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   color: inherit;
@@ -341,6 +346,23 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 .category-list li a:hover {
   color: var(--color-white);
+}
+
+.contact-card {
+  background: var(--color-main);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  color: var(--color-white-75);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.contact-card .icon {
+  background: var(--color-main-dark);
+}
+.contact-card .blog-title {
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
 }
 
 ::-webkit-scrollbar {
@@ -988,11 +1010,10 @@ header .header .custom-navbar li a {
 .contact-form {
   border: 1px solid var(--color-main);
   border-radius: 0.5rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .contact-form label {
   width: 100%;
-  padding: 0.5rem 1rem;
 }
 .contact-form .custom-form {
   background: transparent;
@@ -1033,6 +1054,11 @@ header .header .custom-navbar li a {
 }
 .home_contact a:hover {
   color: var(--color-main);
+}
+
+.contact-us-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .our-story {
