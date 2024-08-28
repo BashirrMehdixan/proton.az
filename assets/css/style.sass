@@ -13,6 +13,10 @@ html,
 body
     height: 100%
 
+iframe
+    width: 100%
+    border-radius: .5rem
+
 body
     background: linear-gradient(to left, var(--color-main), var(--color-main-dark))
 
@@ -180,6 +184,7 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
     border-radius: 50%
     flex-shrink: 0
     svg
+        color: var(--color-white-75)
         width: 2rem
         height: 2rem
 
@@ -597,10 +602,9 @@ header
 .contact-form
     border: 1px solid var(--color-main)
     border-radius: .5rem
-    padding: 1rem 0
+    padding: 1rem .8rem
     label
         width: 100%
-        padding: .5rem 1rem
     .custom-form
         background: transparent
         color: var(--color-white)
@@ -634,6 +638,9 @@ header
         font-weight: 600
         &:hover
             color: var(--color-main)
+
+.contact-us-section
+    border-bottom: 1px solid rgba(255, 255, 255, .25)
 // Home contact end
 
 // About page start
