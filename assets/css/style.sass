@@ -40,14 +40,14 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
     height: 100%
 
 :root
-    --color-main: #3346d1
+    --color-main: rgb(51, 70, 209)
     --color-main-40: rgba(51, 70, 209, .4)
-    --color-main-2: #331C71
-    --color-main-dark: #350034
-    --color-main-dark-2: #350136
-    --color-white: #fff
-    --color-white-75: rgba(255, 255, 255, .75)
-    --color-black: #262626
+    --color-main-2: rgb(51, 28, 113)
+    --color-main-dark: rgb(53, 0, 52)
+    --color-main-dark-2: rgb(53, 1, 54)
+    --color-white: rgb(255, 255, 255)
+    --color-white-75: rgba(255, 255, 255, 0.75)
+    --color-black: rgb(38, 38, 38)
     --color-gray: rgb(163, 163, 163)
 
 // Swiper start
@@ -190,6 +190,11 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
     text-align: center
     text-transform: capitalize
 
+.blog-title
+    color: var(--color-white)
+    font-size: 2rem
+    font-weight: 600
+
 .section-title-box
     border-bottom: 1px solid var(--color-white-75)
     padding: 1rem 0
@@ -318,6 +323,7 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
 .blog-tags
     display: flex
     align-items: center
+    flex-wrap: wrap
     margin: .8rem 0
     gap: 1rem
     li
@@ -696,6 +702,7 @@ header
     gap: .8rem
     .feather
         color: var(--color-white-75)
+
 .blog-detail
     color: var(--color-white)
     border-bottom: 1px solid rgba(255, 255, 255, .15)
@@ -703,9 +710,6 @@ header
         margin-bottom: 1.5rem
         img
             width: 100%
-    .blog-title
-        font-size: 2rem
-        font-weight: 600
     .blog-info
         color: var(--color-white-75)
         gap: 1.5rem
@@ -758,6 +762,29 @@ header
                     top: 50%
                     background-color: var(--color-gray)
 
+.right-detail
+    padding: 0 2.5rem
+    .blog-title
+        font-size: 1.5rem
+        font-weight: 500
+    .right-item
+        padding: 2rem 0
+        border-bottom: 1px solid rgba(255, 255, 255, .45)
+        &:last-child
+            border-bottom: 0
+        .form-group
+            position: relative
+            .custom-form
+                color: var(--color-white)
+                border-radius: .5rem
+                border: 1px solid var(--color-main-dark)
+                background: transparent
+                &::placeholder
+                    color: var(--color-white)
+            .btn-search
+                position: absolute
+                top: .6rem
+                right: 0
 // Blog detail end
 
 //  Footer start
