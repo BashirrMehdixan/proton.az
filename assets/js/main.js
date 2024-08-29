@@ -92,3 +92,22 @@ window.addEventListener('scroll', () => {
         header.classList.remove("fixed-header");
     }
 })
+
+const btnSearch = document.querySelector(".btn-search");
+const searchContainer = document.querySelector(".search-modal-container");
+
+btnSearch.addEventListener('click', () => {
+    searchContainer.classList.add("active");
+})
+
+searchContainer.addEventListener('click', (e) => {
+    if (e.target === searchContainer) {
+        searchContainer.classList.remove("active");
+    }
+})
+
+window.addEventListener('keyup', (e) => {
+    if (e.key == "Escape") {
+        searchContainer.classList.remove("active");
+    }
+})
