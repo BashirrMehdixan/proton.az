@@ -291,7 +291,6 @@
 
 .contact-card
     background-color: var(--color-main)
-
     color: var(--color-white-75)
     font-size: 1.25rem
     height: 16.25rem
@@ -303,12 +302,15 @@
         // font-size: 2.28rem
         text-transform: capitalize
     .icon
+        transition: .5s
         background-color: var(--color-main-dark)
     .phone-list
         margin-top: .5rem
         font-weight: 500
     &:hover
         background-color: var(--color-main-dark-2)
+        .icon
+            background: var(--color-main)
 
 .contact-card
     background: var(--color-main)

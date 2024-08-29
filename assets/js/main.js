@@ -1,5 +1,12 @@
-feather.replace();
+const header = document.querySelector("header");
+const btnNav = document.querySelector(".btn-nav");
+const btnClose = document.querySelector("header .btn-close");
+const nav = document.querySelector("header nav");
+const btnSearch = document.querySelector(".btn-search");
+const searchContainer = document.querySelector(".search-modal-container");
+const scrollBtn = document.querySelector(".btn-top");
 
+feather.replace();
 let servicesSwiper = new Swiper(".servicesSwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -72,10 +79,6 @@ let teamsSwiper = new Swiper(".teamsSwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-const header = document.querySelector("header");
-const btnNav = document.querySelector(".btn-nav");
-const btnClose = document.querySelector("header .btn-close");
-const nav = document.querySelector("header nav");
 
 btnNav.addEventListener('click', () => {
     nav.classList.add("active");
@@ -91,10 +94,14 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove("fixed-header");
     }
+
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("active");
+    } else {
+        scrollBtn.classList.remove("active");
+    }
 })
 
-const btnSearch = document.querySelector(".btn-search");
-const searchContainer = document.querySelector(".search-modal-container");
 
 btnSearch.addEventListener('click', () => {
     searchContainer.classList.add("active");

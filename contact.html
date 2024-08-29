@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/proton-logo.ico" type="image/x-icon">
+    <!-- Fontawesom Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
     <!-- Swiper -->
@@ -15,6 +20,9 @@
 </head>
 
 <body>
+    <a href="#" class="btn btn-top">
+        <i data-feather="arrow-up"></i>
+    </a>
     <!-- Search modal start -->
     <div class="search-modal-container">
         <div class="container">
@@ -47,7 +55,7 @@
                 </div>
                 <nav>
                     <ul class="custom-navbar">
-                        <li class="d-flex d-lg-none align-items-center justify-content-between">
+                        <li class="nav-item mobile-header">
                             <a href="./index.html" class="logo">
                                 <img src="./assets/images/proton-logo.svg" alt="">
                             </a>
@@ -55,20 +63,58 @@
                                 <i data-feather="x"></i>
                             </button>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="./index.html">Home</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="./about.html">About us</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="./portfolio.html">Portfolio</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="./blog.html">Blog</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <ul class="contact-list px-4">
+                                <li>
+                                    <a href="mailto:test@yourdomain.com">
+                                        test@yourdomain.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+994 55 555 55 55">
+                                        +994 55 555 55 55
+                                    </a>
+                                </li>
+                                <li>
+                                    <ul class="social-network">
+                                        <li>
+                                            <a href="#">
+                                                <i data-feather="facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i data-feather="instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i data-feather="twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i data-feather="linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -77,9 +123,12 @@
                         <i data-feather="search"></i>
                     </button>
                     <button class="btn btn-nav text-white">
-                        <i data-feather="menu"></i>
+                        <i data-feather="grid"></i>
                     </button>
-                    <a href="./contact.html" class="d-none d-lg-block btn btn-main dark">Contact now</a>
+                    <a href="./contact.html" class="d-none d-lg-flex align-items-center gap-2 btn btn-main dark custom-rounded">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Contact now</span>
+                    </a>
                 </div>
             </div>
         </div>

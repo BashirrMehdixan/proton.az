@@ -370,6 +370,7 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   text-transform: capitalize;
 }
 .contact-card .icon {
+  transition: 0.5s;
   background-color: var(--color-main-dark);
 }
 .contact-card .phone-list {
@@ -378,6 +379,9 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 .contact-card:hover {
   background-color: var(--color-main-dark-2);
+}
+.contact-card:hover .icon {
+  background: var(--color-main);
 }
 
 .contact-card {
@@ -480,6 +484,12 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
 .btn {
   transition: 0.5s ease-in-out;
 }
+.btn.custom-rounded {
+  border-radius: 2rem;
+}
+.btn.custom-rounded .fa-whatsapp {
+  font-size: 1.5rem;
+}
 .btn:focus {
   outline: none;
   border: none;
@@ -504,6 +514,29 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   fill: var(--color-white);
 }
 .btn.btn-search {
+  color: var(--color-white);
+}
+.btn.btn-top {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-main-dark);
+  transition: 0.5s;
+  transform: scale(0);
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+}
+.btn.btn-top.active {
+  transform: scale(1);
+}
+.btn.btn-top .feather {
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--color-white);
 }
 .btn.btn-main {
@@ -694,8 +727,8 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
   color: var(--color-white);
 }
 .pagination li a {
-  width: 3.3rem;
-  height: 3.3rem;
+  width: 2.8rem;
+  height: 2.8rem;
   font-size: 1.12rem;
   display: flex;
   flex-shrink: 0;
@@ -788,10 +821,20 @@ header .header .custom-navbar {
   gap: 1rem;
   padding: 1rem 0;
 }
-header .header .custom-navbar li a {
+header .header .custom-navbar li.nav-item.mobile-header {
+  display: none;
+}
+header .header .custom-navbar li.nav-item a {
   display: block;
   padding: 1rem 0.5rem;
   font-weight: 500;
+}
+header .header .custom-navbar .contact-list {
+  display: none;
+}
+header .header .custom-navbar .contact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .banner-bg {
@@ -1371,6 +1414,9 @@ header .header .custom-navbar li a {
 }
 
 @media (max-width: 992px) {
+  .breadcrumb-bg {
+    margin-top: 0;
+  }
   .btn.btn-nav {
     display: inline-block;
   }
@@ -1402,10 +1448,22 @@ header .header .custom-navbar li a {
     align-items: flex-start;
     flex-direction: column;
   }
-  header .header nav .custom-navbar li {
+  header .header nav .custom-navbar .contact-list {
+    display: block;
+    padding-top: 1.5rem;
+  }
+  header .header nav .custom-navbar li.nav-item {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 1rem;
+  }
+  header .header nav .custom-navbar li.nav-item.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header nav .custom-navbar li.nav-item a {
+    padding: 0 0.5rem;
   }
   .preferences-section-2 .successful-projects .project-item {
     padding: 0 1.5rem;
