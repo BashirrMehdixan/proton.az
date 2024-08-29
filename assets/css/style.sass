@@ -164,7 +164,7 @@ i, h1,h2, h3, h4, h5, h6,p, ul, ol
 // Buttons end
 
 .section-img
-    margin-bottom: 1.5rem
+    margin: 1.5rem 0 .8rem 0
     img
         display: block
         max-width: 100%
@@ -622,7 +622,7 @@ header
 
 .home_contact
     .contact-info
-        padding: 1rem 0
+        padding: 1.5rem 0
         .icon
             width: 5rem
             height: 4rem
@@ -849,6 +849,30 @@ header
 
 // Footer end
 
+.search-modal-container
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: rgba(0, 0, 0, .9)
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 999
+    transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1)
+    transform-origin: top
+    transform: scaleY(0)
+    &.active
+        transform: scaleY(1)
+    .form-group
+        position: relative
+        .custom-form
+            background: transparent
+            color: var(--color-white)
+            &::placeholder
+                color: var(--color-white)
+
 // Media queries
 @media (max-width: 992px)
     .btn
@@ -935,7 +959,11 @@ header
         li
             &:nth-child(2n)
                 border-right: none
-
+@media only screen and (max-width: 481px)
+    header
+        .header
+            .btn-search
+                display: none
 // Animation
 @keyframes popupBtn
     0%
