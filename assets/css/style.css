@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap");
 * {
-  font-family: "Outfit", system-ui;
+  font-family: "Outfit", sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -595,11 +595,13 @@ i, h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 .section-img {
   margin: 1.5rem 0 0.8rem 0;
+  border-radius: 0.8rem;
 }
 .section-img img {
   display: block;
+  border-radius: 0.8rem;
   max-width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
 
 .inner-text {
@@ -897,6 +899,14 @@ header .header .custom-navbar .contact-list li {
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.benefit-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 3rem 0;
+}
+.benefit-section .service-card {
+  transform: translateY(0);
 }
 
 .swiper-buttons {
